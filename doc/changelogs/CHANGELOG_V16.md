@@ -291,7 +291,6 @@
 * \[[`95083cb0ad`](https://github.com/nodejs/node/commit/95083cb0ad)] - **http2**: use `kEmptyObject` (LiviaMedeiros) [#43159](https://github.com/nodejs/node/pull/43159)
 * \[[`367454205d`](https://github.com/nodejs/node/commit/367454205d)] - **http2**: set origin name correctly when servername is empty (ofirbarak) [#42838](https://github.com/nodejs/node/pull/42838)
 * \[[`c73f739acd`](https://github.com/nodejs/node/commit/c73f739acd)] - **http2**: improve tests and docs (Daeyeon Jeong) [#42858](https://github.com/nodejs/node/pull/42858)
-
 * \[[`4fbedffb55`](https://github.com/nodejs/node/commit/4fbedffb55)] - **https**: use `kEmptyObject` (LiviaMedeiros) [#43159](https://github.com/nodejs/node/pull/43159)
 * \[[`5879642260`](https://github.com/nodejs/node/commit/5879642260)] - **inspector**: set sampling interval before start (Shelley Vohr) [#43779](https://github.com/nodejs/node/pull/43779)
 * \[[`096f7fc59a`](https://github.com/nodejs/node/commit/096f7fc59a)] - **inspector**: add missing initialization (Michael Dawson) [#43254](https://github.com/nodejs/node/pull/43254)
