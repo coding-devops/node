@@ -74,7 +74,7 @@
 Node.js ESM Loader hooks now support multiple custom loaders, and composition is
 achieved via "chaining": `foo-loader` calls `bar-loader` calls `qux-loader`
 (a custom loader _must_ now signal a short circuit when intentionally not
-calling the next). See the [ESM docs](https://nodejs.org/api/esm.html) for details.
+calling the next). See the [ESM docs](https://nodejs.org/dist/latest-v16.x/docs/api/esm.html) for details.
 
 Real-world use-cases are laid out for end-users with working examples in the
 article [Custom ESM loaders: Who, what, when, where, why, how](https://dev.to/jakobjingleheimer/custom-esm-loaders-who-what-when-where-why-how-4i1o).
@@ -89,14 +89,14 @@ To better align Node.js' experimental implementation of the Web Crypto API with 
 * The proprietary `'NODE-DSA'`, `'NODE-DH'`, `'NODE-SCRYPT'`, `'NODE-ED25519'`, `'NODE-ED448'`, `'NODE-X25519'`, and `'NODE-X448'` algorithms were removed.
 * The proprietary `'node.keyObject'` import/export format was removed.
 
-Contributed by Filip Skokan - [#42507](https://github.com/nodejs/node/pull/42507), [#43310](https://github.com/nodejs/node/pull/43310).
+Contributed by Filip Skokan - [#42507](https://github.com/nodejs/node/pull/42507), [#43310](https://github.com/nodejs/node/pull/43310)
 
 #### Dependency updates
 
-* Updated Corepack to 0.12.1 - [#43965](https://github.com/nodejs/node/pull/43965).
-* Updated ICU to 71.1 - [#42655](https://github.com/nodejs/node/pull/42655).
-* Updated npm to 8.15.0 - [#43917](https://github.com/nodejs/node/pull/43917).
-* Updated Undici to 5.8.0 - [#43886](https://github.com/nodejs/node/pull/43886).
+* Updated Corepack to 0.12.1 - [#43965](https://github.com/nodejs/node/pull/43965)
+* Updated ICU to 71.1 - [#42655](https://github.com/nodejs/node/pull/42655)
+* Updated npm to 8.15.0 - [#43917](https://github.com/nodejs/node/pull/43917)
+* Updated Undici to 5.8.0 - [#43886](https://github.com/nodejs/node/pull/43886)
 
 #### Other notable changes
 
