@@ -69,16 +69,43 @@
 
 ### Notable Changes
 
-* \[[`72a0c5c743`](https://github.com/nodejs/node/commit/72a0c5c743)] - **(SEMVER-MINOR)** **crypto**: remove Node.js-specific webcrypto extensions (Filip Skokan) [#43310](https://github.com/nodejs/node/pull/43310)
-* \[[`2e3a69a2ba`](https://github.com/nodejs/node/commit/2e3a69a2ba)] - **(SEMVER-MINOR)** **crypto**: add CFRG curves to Web Crypto API (Filip Skokan) [#42507](https://github.com/nodejs/node/pull/42507)
+#### Experimental ESM Loader Hooks API
+
+Node.js ESM Loader hooks now support multiple custom loaders, and composition is
+achieved via "chaining": `foo-loader` calls `bar-loader` calls `qux-loader`
+(a custom loader _must_ now signal a short circuit when intentionally not
+calling the next). See the [ESM docs](https://nodejs.org/api/esm.html) for details.
+
+Real-world use-cases are laid out for end-users with working examples in the
+article [Custom ESM loaders: Who, what, when, where, why, how](https://dev.to/jakobjingleheimer/custom-esm-loaders-who-what-when-where-why-how-4i1o).
+
+Contributed by Jacob Smith, Geoffrey Booth, and Bradley Farias - [#42623](https://github.com/nodejs/node/pull/42623)
+
+#### Improved interoperability of the Web Crypto API
+
+To better align Node.js' experimental implementation of the Web Crypto API with other runtimes, several changes were made:
+
+* Support for CFRG curves was added, with the `'Ed25519'`, `'Ed448'`, `'X25519'`, and `'X448'` algorithms.
+* The proprietary `'NODE-DSA'`, `'NODE-DH'`, `'NODE-SCRYPT'`, `'NODE-ED25519'`, `'NODE-ED448'`, `'NODE-X25519'`, and `'NODE-X448'` algorithms were removed.
+* The proprietary `'node.keyObject'` import/export format was removed.
+
+Contributed by Filip Skokan - [#42507](https://github.com/nodejs/node/pull/42507), [#43310](https://github.com/nodejs/node/pull/43310).
+
+#### Dependency updates
+
+* Updated Corepack to 0.12.1 - [#43965](https://github.com/nodejs/node/pull/43965).
+* Updated ICU to 71.1 - [#42655](https://github.com/nodejs/node/pull/42655).
+* Updated npm to 8.15.0 - [#43917](https://github.com/nodejs/node/pull/43917).
+* Updated Undici to 5.8.0 - [#43886](https://github.com/nodejs/node/pull/43886).
+
+#### Other notable changes
+
 * \[[`5f1e9e2030`](https://github.com/nodejs/node/commit/5f1e9e2030)] - **(SEMVER-MINOR)** **crypto**: make authTagLength optional for CC20P1305 (Tobias Nießen) [#42427](https://github.com/nodejs/node/pull/42427)
 * \[[`934077a137`](https://github.com/nodejs/node/commit/934077a137)] - **(SEMVER-MINOR)** **crypto**: align webcrypto RSA key import/export with other implementations (Filip Skokan) [#42816](https://github.com/nodejs/node/pull/42816)
-* \[[`0ff00945d5`](https://github.com/nodejs/node/commit/0ff00945d5)] - **deps**: update undici to 5.4.0 (Node.js GitHub Bot) [#43262](https://github.com/nodejs/node/pull/43262)
 * \[[`7683e9623c`](https://github.com/nodejs/node/commit/7683e9623c)] - **(SEMVER-MINOR)** **dns**: export error code constants from `dns/promises` (Feng Yu) [#43176](https://github.com/nodejs/node/pull/43176)
 * \[[`302a134b83`](https://github.com/nodejs/node/commit/302a134b83)] - **doc**: deprecate coercion to integer in process.exit (Daeyeon Jeong) [#43738](https://github.com/nodejs/node/pull/43738)
 * \[[`4884f18ce5`](https://github.com/nodejs/node/commit/4884f18ce5)] - **(SEMVER-MINOR)** **doc**: deprecate diagnostics\_channel object subscribe method (Stephen Belanger) [#42714](https://github.com/nodejs/node/pull/42714)
 * \[[`90f395dda9`](https://github.com/nodejs/node/commit/90f395dda9)] - **(SEMVER-MINOR)** **errors**: add support for cause in aborterror (James M Snell) [#41008](https://github.com/nodejs/node/pull/41008)
-* \[[`247a6f6e85`](https://github.com/nodejs/node/commit/247a6f6e85)] - **(SEMVER-MINOR)** **esm**: add chaining to loaders (Jacob Smith) [#42623](https://github.com/nodejs/node/pull/42623)
 * \[[`7a5de2cc0c`](https://github.com/nodejs/node/commit/7a5de2cc0c)] - **(SEMVER-MINOR)** **events**: expose CustomEvent on global with CLI flag (Daeyeon Jeong) [#43885](https://github.com/nodejs/node/pull/43885)
 * \[[`087adbb7a3`](https://github.com/nodejs/node/commit/087adbb7a3)] - **(SEMVER-MINOR)** **events**: add `CustomEvent` (Daeyeon Jeong) [#43514](https://github.com/nodejs/node/pull/43514)
 * \[[`979c98a3cb`](https://github.com/nodejs/node/commit/979c98a3cb)] - **(SEMVER-MINOR)** **events**: propagate abortsignal reason in new AbortError ctor in events (James M Snell) [#41008](https://github.com/nodejs/node/pull/41008)
