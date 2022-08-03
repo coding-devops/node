@@ -69,6 +69,12 @@
 
 ### Notable Changes
 
+#### Experimental command-line argument parser API
+
+Adds [`util.parseArgs`](https://nodejs.org/dist/latest-v16.x/docs/api/util.html#utilparseargsconfig) helper for higher level command-line argument parsing.
+
+Contributed by Benjamin Coe, John Gee, Darcy Clarke, Joe Sepi, Kevin Gibbons, Aaron Casanova, and Jessica Nahulan - [#42675](https://github.com/nodejs/node/pull/42675)
+
 #### Experimental ESM Loader Hooks API
 
 Node.js ESM Loader hooks now support multiple custom loaders, and composition is
@@ -139,8 +145,6 @@ Contributed by Filip Skokan - [#42507](https://github.com/nodejs/node/pull/42507
 * \[[`cd6f24be4c`](https://github.com/nodejs/node/commit/cd6f24be4c)] - **(SEMVER-MINOR)** **test\_runner**: add initial CLI runner (Colin Ihrig) [#42658](https://github.com/nodejs/node/pull/42658)
 * \[[`a4b277cb4d`](https://github.com/nodejs/node/commit/a4b277cb4d)] - **(SEMVER-MINOR)** **test\_runner**: support 'only' tests (Colin Ihrig) [#42514](https://github.com/nodejs/node/pull/42514)
 * \[[`2aae868fa2`](https://github.com/nodejs/node/commit/2aae868fa2)] - **(SEMVER-MINOR)** **timers**: propagate signal.reason in awaitable timers (James M Snell) [#41008](https://github.com/nodejs/node/pull/41008)
-* \[[`432e3054be`](https://github.com/nodejs/node/commit/432e3054be)] - **(SEMVER-MINOR)** **util**: add tokens to parseArgs (John Gee) [#43459](https://github.com/nodejs/node/pull/43459)
-* \[[`a1e122be62`](https://github.com/nodejs/node/commit/a1e122be62)] - **(SEMVER-MINOR)** **util**: add parseArgs module (Benjamin Coe) [#42675](https://github.com/nodejs/node/pull/42675)
 * \[[`513f52445b`](https://github.com/nodejs/node/commit/513f52445b)] - **(SEMVER-MINOR)** **v8**: add v8.startupSnapshot utils (Joyee Cheung) [#43329](https://github.com/nodejs/node/pull/43329)
 * \[[`a8eca74450`](https://github.com/nodejs/node/commit/a8eca74450)] - **(SEMVER-MINOR)** **v8**: export more fields in getHeapStatistics (theanarkh) [#42784](https://github.com/nodejs/node/pull/42784)
 * \[[`845279e331`](https://github.com/nodejs/node/commit/845279e331)] - **(SEMVER-MINOR)** **worker**: add hasRef() to MessagePort (Darshan Sen) [#42849](https://github.com/nodejs/node/pull/42849)
